@@ -2,9 +2,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/main.css">
     <title>Productivity App</title>
 </head>
 <body>
-    
+    <div class="wraper">
+        <header class="header">To do list</header>
+        <section class="body">
+            <input type="text" id="addTodo" placeholder="Add task" class="todo-input">
+            <button class="btnAdd">Add</button>
+            <div id="task-list">
+                <ul class="list-todos">
+                    <li class="list-item">a</li>
+                    <li class="list-item">b</li>
+                    <li class="list-item">c</li>
+                    <li class="list-item">d</li>
+                </ul>
+            </div>
+        </section>
+        <footer class="footer"></footer>
+    </div>
 </body>
 </html>
