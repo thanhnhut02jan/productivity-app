@@ -1,3 +1,5 @@
+/* https://colorhunt.co/palette/225739 */
+
 .wraper {
     width: 100%;
     height: 100%;
@@ -39,7 +41,7 @@
     color: #e7e7de;
     background-color: #008891;
     border: #008891 2px solid;
-    padding: 8px 8px;
+    padding: 6px 8px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -54,20 +56,25 @@
 
 .list-todos {
     list-style-type: none;
-    padding: 0 10px;
+    padding: 10px 10px;
     margin: 10px 0;
     color: #005157;
     font-size: larger;
-}
-
-.list-todos li {
-    padding: 10px 15px;
-    width: 300px;
+    max-width: 500px;
+    margin-right: 50px;
     border-radius: 5px;
 }
 
+.list-todos li {
+    padding: 20px 0 20px 30px;
+    cursor: pointer;
+    border-bottom: #aaa 1px solid;
+    
+}
+
 .list-todos li:hover {
-    background-color: #109999;
-    color: #e7e7de;
-    transition: 0.1s;
+    z-index: 1;
+    transform: translateX(5px);
+    transition: 0.2s;
+    border-bottom: #005157 1px solid;
 }
