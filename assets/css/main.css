@@ -67,7 +67,6 @@
 
 .list-todos li {
     padding: 20px 0 20px 30px;
-    cursor: pointer;
     border-bottom: #aaa 1px solid;
     
 }
@@ -77,4 +76,15 @@
     transform: translateX(5px);
     transition: 0.2s;
     border-bottom: #005157 1px solid;
+}
+
+.list-todos li:hover .delBtn{
+    display: block;
+}
+
+.delBtn {
+    float: right;
+    display: none;
+    cursor: pointer;
+    margin-right: 20px;
 }
