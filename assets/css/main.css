@@ -78,13 +78,32 @@
     border-bottom: #005157 1px solid;
 }
 
+.list-item--done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
 .list-todos li:hover .delBtn{
-    display: block;
+    opacity: 1;
+}
+
+.list-todos li:hover .markAsDoneBtn{
+    opacity: 1;
+}
+
+.markAsDoneBtn {
+    float: right;
+    cursor: pointer;
+    margin-right: 20px;
+    opacity: 0;
+    transition: 0.2s;
 }
 
 .delBtn {
     float: right;
-    display: none;
     cursor: pointer;
     margin-right: 20px;
+    opacity: 0;
+    transition: 0.2s;
 }
+
