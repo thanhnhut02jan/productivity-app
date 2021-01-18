@@ -29,7 +29,7 @@ function render() {
             icon = '<i class="fas fa-undo"></i>'
         }
         return `<li class='${classList}'>
-                    ${item.data}
+                    ${index + 1}. ${item.data}
                     <div class="delBtn" data-index=${index}> <i class="far fa-trash-alt"></i> </i></div>
                     <div class='markAsDoneBtn' data-index=${index}> ${icon} </div>
                 </li> 

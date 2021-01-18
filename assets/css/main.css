@@ -18,16 +18,17 @@
 }
 
 .body {
-    padding: 10px 20px;
+    padding: 20px;
     font-size: 1.2em;
-    width: 100%;
 }
 
 .todo-input {
     border: #aaa 2px solid;
-    border-radius: 5px;
-    padding: 5px;
+    height: 40px;
     color: #005157;
+    box-sizing: border-box;
+    padding: 0 10px;
+    display: inline;
 }
 
 .todo-input:focus {
@@ -37,13 +38,14 @@
 }
 
 .btnAdd {
+    width: 60px;
+    height: 40px;
     margin-left: 10px;
     color: #e7e7de;
     background-color: #008891;
     border: #008891 2px solid;
-    padding: 6px 8px;
-    border-radius: 5px;
     cursor: pointer;
+    padding: 0;
 }
 
 .btnAdd:focus {
@@ -61,8 +63,10 @@
     color: #005157;
     font-size: larger;
     max-width: 500px;
+    height: 50vh;
     margin-right: 50px;
     border-radius: 5px;
+    overflow: auto;
 }
 
 .list-todos li {
