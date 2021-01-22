@@ -29,12 +29,14 @@ function render() {
             icon = '<i class="fas fa-undo"></i>'
         }
         return `<li class='${classList}'>
-                    ${index + 1}. ${item.data}
-                    <div class="delBtn" data-index=${index}> <i class="far fa-trash-alt"></i> </i></div>
+                    <p class='tooltip'>${item.data}</p>
+                    <span>${item.data}</span>
+                    <div class="delBtn" data-index=${index}> <i class="far fa-trash-alt"></i></div>
                     <div class='markAsDoneBtn' data-index=${index}> ${icon} </div>
-                </li> 
-        `
-    }); 
+                </li>
+        `.trim();
+    });
+
     taskContainer.innerHTML = 
     `<ul class="list-todos">
         ${mapList.join(' ')}
@@ -52,7 +54,6 @@ function render() {
 }
 render();
 
-let input = document.getElementById('add-todo-input');
 function addTask(event) {
     if (event.which == 1 || event.which == 13) {
         if (input.value) {
@@ -69,6 +70,8 @@ function addTask(event) {
 }
 
 let addBtn = document.getElementById('addBtn');
+let input = document.getElementById('add-todo-input');
+
 addBtn.addEventListener('click', addTask);
 input.addEventListener('keypress', addTask);
     

@@ -57,34 +57,60 @@
 }
 
 .list-todos {
-    list-style-type: none;
-    padding: 10px 10px;
-    margin: 10px 0;
+    padding-left: 0;
+    margin: 10px 0 10px 40px;
     color: #005157;
     font-size: larger;
-    max-width: 500px;
     height: 50vh;
+    max-width: 500px;
     margin-right: 50px;
     border-radius: 5px;
-    overflow: auto;
 }
 
-.list-todos li {
-    padding: 20px 0 20px 30px;
+
+.list-item {
+    position: relative;
+    padding: 16px 0 16px 30px;
     border-bottom: #aaa 1px solid;
-    
+    width: 100%;
 }
 
-.list-todos li:hover {
+.list-item:hover {
     z-index: 1;
     transform: translateX(5px);
     transition: 0.2s;
     border-bottom: #005157 1px solid;
 }
 
-.list-item--done {
+.list-item:hover .tooltip {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.list-item--done span {
     text-decoration: line-through;
-    opacity: 0.5;
+    color: gray;
+}
+
+.list-item span {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 70%;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+.list-item .tooltip {
+    height: 28px;
+    background-color: #eee;
+    position: absolute;
+    top: -30px;
+    border: #005157 1px solid;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 28px;
+    padding: 0 6px;
+    opacity: 0;
 }
 
 .list-todos li:hover .delBtn{
