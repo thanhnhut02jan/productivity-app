@@ -1,5 +1,11 @@
 /* https://colorhunt.co/palette/225739 */
 
+:root {
+    --bright-text: #e7e7de;
+    --main-color: #008891;
+    --main-hover-color: #005157;
+}
+
 .wraper {
     width: 100%;
     height: 100%;
@@ -10,14 +16,14 @@
     height: 48px;
     width: 100%;
     background-color: #008891;
-    color: #e7e7de;
+    color: var(--bright-text);
     font-size: 1.6em;
     text-align: center;
     line-height: 48px;
     font-weight: 600;
 }
 
-.body {
+.todo-body {
     padding: 20px;
     font-size: 1.2em;
 }
@@ -25,7 +31,7 @@
 .todo-input {
     border: #aaa 2px solid;
     height: 40px;
-    color: #005157;
+    color: var(--main-color);
     box-sizing: border-box;
     padding: 0 10px;
     display: inline;
@@ -33,91 +39,60 @@
 
 .todo-input:focus {
     outline: none;
-    border: #008891 2px solid;
+    border: var(--main-color) 2px solid;
     transition: 0.3s;
 }
 
-.btnAdd {
+.addBtn {
     width: 60px;
     height: 40px;
     margin-left: 10px;
     color: #e7e7de;
-    background-color: #008891;
-    border: #008891 2px solid;
-    cursor: pointer;
+    background-color: var(--main-color);
+    border: var(--main-color) 2px solid;
     padding: 0;
 }
 
-.btnAdd:focus {
+.addBtn:focus {
     outline: none;
 }
 
-.btnAdd:hover {
+.addBtn:hover {
     background-color: #109999;
+    cursor: pointer;
 }
 
 .list-todos {
+    list-style: none;
     padding-left: 0;
     margin: 10px 0 10px 40px;
-    color: #005157;
+    color: var(--main-color);
     font-size: larger;
-    height: 50vh;
     max-width: 500px;
     margin-right: 50px;
     border-radius: 5px;
 }
 
 
-.list-item {
-    position: relative;
-    padding: 16px 0 16px 30px;
+.list-todos .list-item {
+    padding: 12px 0 12px 30px;
     border-bottom: #aaa 1px solid;
     width: 100%;
 }
 
-.list-item:hover {
-    z-index: 1;
+.list-todos .list-item:hover {
+    color: var(--main-hover-color);
+    border-bottom: var(--main-hover-color) 1px solid;
     transform: translateX(5px);
     transition: 0.2s;
-    border-bottom: #005157 1px solid;
+    z-index: 1;
 }
 
-.list-item:hover .tooltip {
-    opacity: 1;
-    transition: 0.5s;
-}
-
-.list-item--done span {
-    text-decoration: line-through;
-    color: gray;
-}
-
-.list-item span {
-    display: inline-block;
-    overflow: hidden;
-    max-width: 70%;
-    height: 30px;
-    text-overflow: ellipsis;
-}
-
-.list-item .tooltip {
-    height: 28px;
-    background-color: #eee;
-    position: absolute;
-    top: -30px;
-    border: #005157 1px solid;
-    border-radius: 6px;
-    font-size: 12px;
-    line-height: 28px;
-    padding: 0 6px;
-    opacity: 0;
-}
-
-.list-todos li:hover .delBtn{
+.list-item:hover .markAsDoneBtn{
     opacity: 1;
 }
 
-.list-todos li:hover .markAsDoneBtn{
+.list-item:hover .delBtn{
     opacity: 1;
 }
 
@@ -136,4 +111,21 @@
     opacity: 0;
     transition: 0.2s;
 }
+
+.list-item span {
+    display: inline-block;
+    overflow: hidden;
+    max-width: 70%;
+    height: 30px;
+    text-overflow: ellipsis;
+}
+
+.list-item--done span {
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+
+
 
